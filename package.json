@@ -1,0 +1,30 @@
+{
+  "name": "damayanti-resume-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "postinstall": "node -e \"const fs=require('fs');const p1='node_modules/@rollup/wasm-node/dist';const p2='node_modules/rollup/dist';if(fs.existsSync(p1)&&fs.existsSync(p2)){fs.cpSync(p1+'/wasm-node',p2+'/wasm-node',{recursive:true});fs.copyFileSync(p1+'/native.js',p2+'/native.js');console.log('Rollup WASM patched successfully');}\""
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "html2pdf.js": "^0.10.2",
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@rollup/wasm-node": "^4.68.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  },
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node@^4.68.2"
+  }
+}

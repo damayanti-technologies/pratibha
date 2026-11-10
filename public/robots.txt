@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://damayanti.tech/sitemap.xml
